@@ -20,16 +20,15 @@ This repo is intended only as a terraform learning exercise applied to the aws c
 **The author also assumes no responsibility for any weaponization of this repository in order to exploit other people's aws accounts for monero mining.**
 
 ## Prerequisites 
+- <a href="https://www.getmonero.org/downloads/">monero</a> wallet
 - <a href="https://aws.amazon.com/console/">aws</a> account
 - <a href="https://www.terraform.io/">Terraform</a> installed on the dev machine
-<br/>
 <br/>
 
 Note: This script has been tested on `Ubuntu 22.04 LTS`
 
 ## Instructions
-clone this repo and start terraform provisioning:
-<br/>
+clone this repo:
 ```console
 git clone https://github.com/R3DRUN3/aws-monero-mining.git \
 && cd aws-monero-mining
@@ -43,17 +42,16 @@ alternatively you can create a new json configuration <a href="https://xmrig.com
 
 You can also modify the `vars.tf` file to change some variables according to your needs,
 <br/>
-
 for example yuo can change the ec2 instance type (the default is a very *resources-constrained* machine), the number of instances etc.
 <br/>
-
-Launch the Terraform provisioning:
 <br/>
+Launch the Terraform provisioning:
 ```console
 terraform init && terraform apply -auto-approve
 ```
 <br/>
-The whole procedure takes a few minutes.
+The whole procedure takes a few minutes
+<br/>
 In the end you can see the generated ec2 instances from your aws console:
 <br/>
 <div style="width: 65%; height: 65%">
